@@ -69,6 +69,14 @@ class Company {
     listEmployees() {
         this.employees.forEach(emp => console.log(emp.getDetails())); // Loop through employees and print details
     }
+    calculateTotalPayroll() { //Task 4 - Calculates and returns the total payroll for all employees, including bonuses for managers
+        return this.employees.reduce((total, employee) => total + employee.calculateAnnualSalary(), 0); 
+    }
+
+    promoteToManager (employee, teamSize) { //Task 5 -  Create a new Manager object based on the existing employee
+        const index = this.employees.indexOf(employee); // Find the index of the employee in the company's employee list
+        this.employees[index] = new Manager(employee.name, employee.id, employee.department, employee.salary, teamSize); //Creating a Manager with the properties of employee saved at index
+    }
 }
 
 // Creating an instance of Company and adding employees
@@ -76,3 +84,9 @@ const company = new Company("TechCorp");
 company.addEmployee(emp1);
 company.addEmployee(mgr1);
 company.listEmployees(); // Display all employees in the company
+
+
+//Task 4 - Implemented Payroll System
+console.log(company.calculateTotalPayroll()); //Logging
+    
+    
