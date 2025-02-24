@@ -50,3 +50,29 @@ const mgr1 = new Manager("John Smith", 201, "IT", 8000, 5);
 
 console.log(mgr1.getDetails()); 
 console.log(mgr1.calculateBonus()); 
+
+
+// Task 3 - Created Company Class
+
+class Company {
+    constructor(name) {
+        this.name = name; 
+        this.employees = []; // Initialize an empty list to store employees
+    }
+
+    // Method to add an employee to the company
+    addEmployee(employee) {
+        this.employees.push(employee); // Add employee to the list
+    }
+
+    // Method to list all employees' details
+    listEmployees() {
+        this.employees.forEach(emp => console.log(emp.getDetails())); // Loop through employees and print details
+    }
+}
+
+// Creating an instance of Company and adding employees
+const company = new Company("TechCorp");
+company.addEmployee(emp1);
+company.addEmployee(mgr1);
+company.listEmployees(); // Display all employees in the company
