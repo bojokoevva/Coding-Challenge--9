@@ -77,7 +77,7 @@ class Company {
         const index = this.employees.indexOf(employee); // Find the index of the employee in the company's employee list
         this.employees[index] = new Manager(employee.name, employee.id, employee.department, employee.salary, teamSize); //Creating a Manager with the properties of employee saved at index
     }
-}
+}; 
 
 // Creating an instance of Company and adding employees
 const company = new Company("TechCorp");
