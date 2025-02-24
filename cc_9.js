@@ -87,6 +87,11 @@ company.listEmployees(); // Display all employees in the company
 
 
 //Task 4 - Implemented Payroll System
-console.log(company.calculateTotalPayroll()); //Logging
+console.log(company.calculateTotalPayroll()); 
+
+//Task 5 - Implemented Promotion System
+// Promoting an employee to manager and listing updated employees
+company.promoteToManager(emp1, 3);
+company.listEmployees(); 
     
     
